@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Второй мозг</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 640 640" aria-hidden="true">
+          <rect width="640" height="640" rx="160" class="logo-bg"/>
+          <path class="logo-brain" d="M308 176c-38-22-92-6-108 38-40 6-68 44-58 86-30 22-34 70-6 96-6 40 26 76 66 76 14 34 60 48 92 26 8-4 14-10 14-10zM332 176c38-22 92-6 108 38 40 6 68 44 58 86 30 22 34 70 6 96 6 40-26 76-66 76-14 34-60 48-92 26-8-4-14-10-14-10z"/>
+          <g class="logo-folds"><path d="M262 236c-22 4-34 22-30 42M300 286c-28-6-54 6-62 30M206 330c20-2 36 8 42 26M298 380c-26 2-44 18-46 42M378 236c22 4 34 22 30 42M340 286c28-6 54 6 62 30M434 330c-20-2-36 8-42 26M342 380c26 2 44 18 46 42"/></g>
+        </svg>
+        <div>
+          <h1 id="greeting">Второй мозг</h1>
+          <div id="dateline" class="dateline"></div>
+        </div>
+      </div>
+      <div class="top-actions">
+        <span id="badge" class="badge"></span>
+        <button id="searchBtn" class="icon-btn" aria-label="Поиск"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg></button>
+      </div>
+    </div>
+    <div id="searchbar" class="searchbar" hidden>
+      <input id="q" type="search" placeholder="Поиск по всем записям…" autocomplete="off">
+      <button id="searchClose" class="icon-btn" aria-label="Закрыть поиск"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
+    </div>
+    <form id="add" autocomplete="off">
+      <input id="input" placeholder="Встреча завтра в 15, такси 500, обед — борщ…" enterkeyhint="send">
+      <button type="submit" aria-label="Добавить"><span class="send"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5.5M6.5 11L12 5.5 17.5 11"/></svg></span><span class="spinner"></span></button>
+    </form>
+    <nav id="tabs">
+      <button data-tab="today" class="active">Сегодня</button>
+      <button data-tab="task">Задачи<span class="count" data-count="task"></span></button>
+      <button data-tab="event">Встречи<span class="count" data-count="event"></span></button>
+      <button data-tab="expense">Расходы</button>
+      <button data-tab="habit">Привычки</button>
+      <button data-tab="list">Списки</button>
+      <button data-tab="meal">Еда</button>
+      <button data-tab="note">Мысли</button>
+      <span class="indicator" aria-hidden="true"></span>
+    </nav>
+  </header>
+  <main id="view">
+    <div class="skeleton"></div><div class="skeleton short"></div><div class="skeleton"></div>
+  </main>
+  <div id="sheet" class="sheet" hidden></div>
+  <div id="toast" class="toast" hidden></div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

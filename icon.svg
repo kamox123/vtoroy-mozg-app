@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">
+  <!-- Аватарка «Второго мозга»: стилизованный мозг из двух половин и искорка ИИ.
+       Всё важное — в центральном круге: Telegram обрезает аватарку по кругу. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b5bf6"/>
+      <stop offset="1" stop-color="#a24ef0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <rect width="640" height="640" fill="url(#glow)"/>
+
+  <!-- Левая половина -->
+  <path d="M308 176c-38-22-92-6-108 38-40 6-68 44-58 86-30 22-34 70-6 96-6 40 26 76 66 76 14 34 60 48 92 26 8-4 14-10 14-10z"
+        fill="#ffffff"/>
+  <!-- Правая половина — зеркально -->
+  <path d="M332 176c38-22 92-6 108 38 40 6 68 44 58 86 30 22 34 70 6 96 6 40-26 76-66 76-14 34-60 48-92 26-8-4-14-10-14-10z"
+        fill="#ffffff"/>
+
+  <!-- Извилины -->
+  <g fill="none" stroke="#7b55f3" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M262 236c-22 4-34 22-30 42"/>
+    <path d="M300 286c-28-6-54 6-62 30"/>
+    <path d="M206 330c20-2 36 8 42 26"/>
+    <path d="M298 380c-26 2-44 18-46 42"/>
+    <path d="M378 236c22 4 34 22 30 42"/>
+    <path d="M340 286c28-6 54 6 62 30"/>
+    <path d="M434 330c-20-2-36 8-42 26"/>
+    <path d="M342 380c26 2 44 18 46 42"/>
+  </g>
+
+  <!-- Искорка ИИ -->
+  <path d="M470 150c6 28 16 38 44 44-28 6-38 16-44 44-6-28-16-38-44-44 28-6 38-16 44-44z" fill="#ffe58a"/>
+  <path d="M430 110c3 12 7 16 19 19-12 3-16 7-19 19-3-12-7-16-19-19 12-3 16-7 19-19z" fill="#ffffff" opacity="0.9"/>
+</svg>
